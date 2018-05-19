@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CaseTheTrain</title>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <span class="headingText">
+                <h1 class="text-center">Departures</h1>
+                <h2>I wish we had actual trains that were useful as public transportation. I mean the austin train is kinda nice but it goes like 2 feet and doesn't accommodate enough of the population's needs for flexible transit.</h2>
+            </span>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Current Schedule</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Train Names</th>
+                                    <th>Destination</th>
+                                    <th>Frequency(mins)</th>
+                                    <th>First Train Time</th>
+                                    <th>Minutes away</th>
+                                    <th>Arival Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="TrainNames"></td>
+                                    <td id="destination"></td>
+                                    <td id="frequency">
+                                    <td id="firstTrain"></td>
+                                    <td id="minsAway"></td>
+                                    <td id="arivalTime"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add Employee</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="usr">Train Name</label>
+                            <input type="text" class="form-control" id="trainNameInput">
+                            <label for="usr">Destination</label>
+                            <input type="text" class="form-control" id="destinationInput">
+                            <label for="usr">First Train Time</label>
+                            <input type="time" class="form-control" id="firstTrainInput">
+                            <label for="usr">Frequency(mins)</label>
+                            <input type="number" class="form-control" id="freqInput">
+                            <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
