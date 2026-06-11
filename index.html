@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>CaseTheTrain</title>
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron text-center">
+        <div class="text-center py-5">
             <span class="headingText">
                 <h1 class="text-center">Departures</h1>
                 <h2>I wish we had actual trains that were useful as public transportation. I mean the austin train is kinda nice but it goes like 2 feet and doesn't accommodate enough of the population's needs for flexible transit.</h2>
@@ -17,11 +17,11 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> Current Schedule</h3>
+                <div class="card border-primary mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title mb-0">Current Schedule</h3>
                     </div>
-                    <div class="panel-body">
+                    <div class="card-body">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -30,18 +30,10 @@
                                     <th>Frequency(mins)</th>
                                     <th>First Train Time</th>
                                     <th>Minutes away</th>
-                                    <th>Arival Time</th>
+                                    <th>Arrival Time</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td id="TrainNames"></td>
-                                    <td id="destination"></td>
-                                    <td id="frequency">
-                                    <td id="firstTrain"></td>
-                                    <td id="minsAway"></td>
-                                    <td id="arivalTime"></td>
-                                </tr>
+                            <tbody id="scheduleBody">
                             </tbody>
                         </table>
                     </div>
@@ -50,11 +42,11 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Add Employee</h3>
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title mb-0">Add Train</h3>
                     </div>
-                    <div class="panel-body">
+                    <div class="card-body">
                         <div class="form-group">
                             <label for="usr">Train Name</label>
                             <input type="text" class="form-control" id="trainNameInput">
@@ -64,16 +56,17 @@
                             <input type="time" class="form-control" id="firstTrainInput">
                             <label for="usr">Frequency(mins)</label>
                             <input type="number" class="form-control" id="freqInput">
-                            <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+                            <button type="button" id="submit-button" class="btn btn-primary mt-3">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/min/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.14.0/firebase-database-compat.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
 </html>
